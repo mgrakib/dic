@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+     <link href="https://cdn.jsdelivr.net/npm/daisyui@2.51.0/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://kit.fontawesome.com/d64724f41e.js" crossorigin="anonymous"></script>
+
+    <style>
+        #artOfSpeech{
+            display: flex;
+            width: 100%;
+            position: relative;
+            align-items: center;
+            gap: 10px;
+        }
+        #artOfSpeech::after{
+            content: "";
+            width: 100%;
+            height: 1px;
+            background-color: rgba(255, 255, 255, 0.139);
+            display: inline-block;
+            top: 50%;
+            position: relative;
+        }
+    </style>
+</head>
+<body>
+    <main class="">
+        <section class="container mx-auto bg-[#1F2531] p-5">
+            <div class="bg-[#313A49] p-5 border-2 border-[#9900FF] text-white">
+                <div class="h-[45px]  flex items-center rounded-lg text-[#313A49] bg-white overflow-hidden">
+                    <input id="input-value" type="text" class="flex-1 py-2 px-4 bg-transparent">
+                    <button onclick="getData()" class="btn w-[20%] bg-teal-500">Search</button>
+                </div>
+                <div class="flex items-center justify-between">
+                    <div>
+                        <h1 id="word" class="text-6xl">keyboard</h1>
+                        <p id="phonetic" class="mt-5 text-2xl">"/həˈləʊ/"</p>
+                    </div>
+                    <dir>
+                        <div class="w-[50px] h-[50px] bg-[#E5CEFB] rounded-full flex justify-center items-center text-black">
+                            <i class="fa-solid fa-play "></i>
+                        </div>
+                    </dir>
+                </div>
+               <div id="container">
+                 <!-- <div class="py-4">
+                    
+                    <p id="partOfSpeech" class="text-3xl">Noun</p>
+                    
+
+                    
+                        <p>Meaning</p>
+                        <ul class="ml-7 list-disc" id="meaning-contianer">
+                            <li class="">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, ad!</li>
+                            <li class="">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, ad!</li>
+                            <li class="">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, ad!</li>
+                        </ul>
+                    
+
+                   
+                 </div> -->
+
+
+                 
+               </div>
+            </div>
+        </section>
+    </main>
+
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="./js/dictionary_six.js"></script>
+</body>
+</html>

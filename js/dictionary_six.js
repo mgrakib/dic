@@ -58,8 +58,9 @@ const setData = (info) => {
             audio.src = element.audio;
 
             const div = document.createElement("div");
+            div.classList.add("cursor-pointer");
             div.innerHTML = `<div onclick="playAudio(${audio})"  id="playAudio" class="w-[40px] md:w-[60px] h-[40px] md:h-[60px] bg-gray-400 rounded-full flex items-center justify-center">
-            <img class="w-[30%]" src="./img/play.png.crdownload" alt="">        
+            <i class="fa-solid fa-play"></i>
               </div>`;
             div.appendChild(audio);
             div.onclick = () => {
@@ -117,11 +118,20 @@ const setData = (info) => {
 			synonymsTitle.innerHTML = `<span class="text-2xl text-gray-500 mr-2">Synonyms:</span> `;
 			synonymsContainer.appendChild(synonymsTitle);
 
-			meaning.synonyms.forEach(syn => {
-				const synonymsDiv = document.createElement("span");
-				synonymsDiv.innerText = syn + " , ";
-				synonymsContainer.appendChild(synonymsDiv);
-			});
+			// meaning.synonyms.forEach(syn => {
+            //     const synonymsDiv = document.createElement("span");
+            //     if (meaning.synonyms.lastIndexOf(syn) === meaning.synonyms) {
+			// 	}
+			// 	synonymsDiv.innerText = syn + " , ";
+			// 	synonymsContainer.appendChild(synonymsDiv);
+			// });
+            
+            const stringDiv = document.createElement('div');
+            stringDiv.classList.add('inline-block')
+            stringDiv.innerText = meaning.synonyms;
+
+            
+            synonymsContainer.appendChild(stringDiv);
 
 			div.appendChild(synonymsContainer);
         } else {
